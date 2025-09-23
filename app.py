@@ -3,8 +3,11 @@ import joblib
 import pandas as pd
 import os
 from math import isnan
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+CORS(app)
 
 # Path ke file model dan scaler
 MODEL_PATH = os.path.join(os.path.dirname(__file__), 'model_xgboost.pkl')
